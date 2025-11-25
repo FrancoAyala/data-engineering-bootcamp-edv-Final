@@ -39,7 +39,7 @@ Este DAG realiza:
 
 ### 📸 Imagen del DAG
 
-![DAG del ejercicio 1](images/ejercicio1_DAG.png)
+![DAG del ejercicio 1](images/ejercicio1_DAG_1.png)
 
 
 

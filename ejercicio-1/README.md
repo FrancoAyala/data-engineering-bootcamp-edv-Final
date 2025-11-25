@@ -39,9 +39,8 @@ Este DAG realiza:
 
 ### 📸 Imagen del DAG
 
-<p align="center">
-  <img src="./images/ejercicio1_DAG.png" width="800">
-</p>
+![DAG del ejercicio 1](images/ejercicio1_DAG.png)
+
 
 
 
@@ -86,22 +85,12 @@ hive/queries_aviacion.sql
 
 
 ### 📊 Resultados de las Queries
-<p align="center">
-  <img src="./images/ejercicio1_6.png" width="700">
-</p>
 
+![Query 1](images/ejercicio1_6.png)
+![Query 2](images/ejercicio1_7.png)
+![Query 3](images/ejercicio1_8.png)
+![Query 4](images/ejercicio1_9.png)
 
-<p align="center">
-  <img src="./images/ejercicio1_7.png" width="700">
-</p>
-
-<p align="center">
-  <img src="./images/ejercicio1_8.png" width="700">
-</p>
-
-<p align="center">
-  <img src="./images/ejercicio1_9.png" width="700">
-</p>
 
 
 ---

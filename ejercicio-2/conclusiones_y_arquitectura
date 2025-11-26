@@ -1,0 +1,112 @@
+✅ Conclusiones y Recomendaciones — Car Rental Analytics
+
+
+🚗 1.1 Vehículos ecológicos
+771 alquileres ecológicos (15.9%)
+
+Electric > Hybrid = 542 vs 229 (ratio 2.4:1)
+Rating promedio 4.99 en ambos segmentos
+
+Insight:
+La demanda eléctrica es significativamente mayor y sostenida. Tesla lidera ampliamente el segmento.
+
+Recomendación:
+Priorizar inventario eléctrico en zonas de mayor demanda (California / Nevada / Oregon).
+
+
+
+🌍 1.2 Distribución geográfica
+Estados con menor demanda: Montana, West Virginia, Delaware (1–4 alquileres).
+Ciudades top en ecológicos: San Diego, Las Vegas, Portland, Phoenix, San José.
+
+Insight:
+La demanda ecológica está fuertemente concentrada en la costa oeste.
+
+Recomendación:
+Optimizar inventario regional y evitar expansión en estados de baja demanda.
+
+
+
+
+  ⭐ 1.3 Modelos más demandados
+Tesla Model 3 (#1) con 288 alquileres
+
+Tesla concentra 35% del TOP 10
+Autos económicos como Toyota Corolla siguen siendo claves en volumen
+
+Insight:
+Tesla domina el segmento premium; mercado claramente bimodal (económicos + eléctricos).
+
+
+🧹 2. Calidad de Datos
+Aspectos positivos
+Dataset limpio tras transformación Spark
+JOIN correcto con dataset de estados
+Categorización consistente (fuelType en lowercase, rating INT)
+Sin Texas (filtrado en el pipeline)
+
+A mejorar
+No hay timestamp del alquiler → limita análisis temporal
+No aparece duración del alquiler
+
+Sin campos operativos como:
+price_total
+days_rented
+vehicle_capacity
+
+Recomendaciones técnicas
+Incorporar metadata temporal
+
+Agregar campos de duración y revenue real
+
+
+
+
+
+
+🏗️ 4. Arquitectura Alternativa 
+☁️ Opción recomendada: Google Cloud Platform (GCP)
+En base a tu profundización en GCP, esta arquitectura es la más alineada a Data Engineering moderno:
+
+Arquitectura propuesta (GCP)
+Cloud Storage (Raw Zone)
+        ↓
+Dataproc (Spark ETL)
+        ↓
+BigQuery (Data Warehouse Serverless)
+        ↓
+Cloud Composer (Airflow)
+        ↓
+Looker Studio (Dashboards)
+
+
+⭐ Ventajas para este proyecto
+BigQuery es ideal para análisis por volumen bajo/medio (4–10k registros por lote)
+
+
+No requiere infraestructura → 100% serverless
+Airflow idéntico al on-premise gracias a Cloud Composer
+Escalable sin cambios en el pipeline
+
+Por qué es la mejor opción para Car Rental
+Dataset pequeño, perfecto para BigQuery
+ETL con Spark se mapea directo a Dataproc
+BI gratuito con Looker Studio
+Fácil de mantener para un equipo pequeño
+
+
+
+🏆 Recomendación Final
+Migrar esta solución a GCP aporta:
+
+✔ Menor costo
+✔ Simplicidad operativa
+✔ BI accesible
+✔ Escalabilidad inmediata
+✔ Menos mantenimiento DevOps
+
+Y permite que el equipo de Data Engineering se enfoque más en calidad de datos + enriquecimiento + análisis avanzado, en lugar de infraestructura.
+
+
+
+

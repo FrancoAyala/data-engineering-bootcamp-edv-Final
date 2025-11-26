@@ -6,56 +6,44 @@ Para enriquecer el data warehouse de aviación y habilitar análisis más comple
 Estado del clima por aeropuerto y fecha/hora: viento, temperatura, visibilidad, tormentas.
 
 Permite:
-
 Analizar impacto del clima en cancelaciones/delays.
-
 Modelar predicciones de puntualidad.
 
-  ✅ 2. Datos de Temporadas, Feriados y Eventos
+  
+✅ 2. Datos de Temporadas, Feriados y Eventos
 Feriados nacionales y provinciales.
-
 Vacaciones escolares.
-
 Grandes eventos deportivos o culturales.
 
 Permite relacionar picos de vuelos y ocupación con demanda real.
 
+
 ✅ 3. Datos Económicos
 Inflación mensual.
-
 Tipo de cambio oficial/promedio.
-
 Índices turísticos.
 
 Permite analizar cómo la economía afecta el transporte aéreo doméstico.
 
 
+
   ✅ 4. Información de Flota y Capacidad
 Agregar por cada aeronave:
-
 Capacidad total de asientos.
-
 Configuración (economy/business).
-
 Año de fabricación.
 
 Esto habilita métricas de ingeniería como:
-
 Load Factor: pasajeros / capacidad.
-
 Eficiencia por modelo.
+
 
 
   ✅ 5. Datos Operativos (si la ANAC los publica)
 Retrasos reales (minutos).
-
 Estado de vuelo (on-time, cancelado, desviado).
-
 Tiempo de aterrizaje vs programado.
-
 Estos campos son esenciales para análisis de performance.
-
-
 
 
 
@@ -66,13 +54,11 @@ Estos campos son esenciales para análisis de performance.
 📌 12.1 Conclusiones Principales
 1. Fuerte concentración del mercado
 Aerolíneas Argentinas domina el tráfico doméstico (~70% pasajeros).
-
 JetSmart + Flybondi aportan ~28% en conjunto.
 
 
 2. Estacionalidad marcada
 Diciembre–Enero es la temporada más activa (≈ 58.000 vuelos).
-
 Picos fuertes en vacaciones y fines de semana largos.
 ➡️ Insight: la demanda es altamente temporal, afectando precio, disponibilidad y planificación operativa.
 
@@ -80,10 +66,8 @@ Picos fuertes en vacaciones y fines de semana largos.
 
   3. Infraestructura concentrada
 Más del 60% de los vuelos se concentran en AEP + EZE.
-
 Muchos aeropuertos provinciales están subutilizados.
 ➡️ Insight: hay oportunidades para descentralizar rutas y mejorar conectividad federal.
-
 
 
 
@@ -107,10 +91,7 @@ Validaciones automáticas en origen (pasajeros >= 0).
 
 
 🗄️ 2. Mejoras en Performance del Pipeline
-
 Particionar por año/mes para acelerar consultas.
-
-
 
 
 

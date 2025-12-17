@@ -135,12 +135,12 @@ Arquitectura alternativa (orientada a GCP) para este caso de uso:
 Dataprep es una herramienta no‑code orientada a la preparación de datos. Permite explorar, limpiar y transformar datasets de forma visual, generando un pipeline reproducible que luego se ejecuta sobre Dataflow. Su uso principal es la preparación y estandarización de datos destinados a análisis o carga en BigQuery.
 
 5.2 Capacidades principales
--Limpieza de datos (eliminar duplicados, valores nulos, inconsistencias).
--Transformaciones de columnas (renombre, conversión de tipos, normalización).
--Creación de columnas calculadas.
--Enriquecimiento mediante joins visuales.
--Filtrado y agregaciones básicas.
--Validaciones automáticas de calidad (detección de anomalías).
+- Limpieza de datos (eliminar duplicados, valores nulos, inconsistencias).
+- Transformaciones de columnas (renombre, conversión de tipos, normalización).
+- Creación de columnas calculadas.
+- Enriquecimiento mediante joins visuales.
+- Filtrado y agregaciones básicas.
+- Validaciones automáticas de calidad (detección de anomalías).
 -Exportación a BigQuery o Cloud Storage.
 
 5.3 Alternativas técnicas y cuándo usarlas

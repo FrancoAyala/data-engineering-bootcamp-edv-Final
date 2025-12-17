@@ -144,12 +144,61 @@ Dataprep es una herramienta no‑code orientada a la preparación de datos. Perm
 -Exportación a BigQuery o Cloud Storage.
 
 5.3 Alternativas técnicas y cuándo usarlas
--Alternativa	Cuándo usarla
--PySpark / Dataflow	Pipelines más complejos, alto volumen, lógica avanzada.
--dbt	Transformaciones SQL versionadas, testing y CI/CD.
--Pandas / Python	Prototipado rápido o integración con ML.
--Talend / Informatica	Procesos ETL corporativos con conectores legacy.
--Dataprep es ideal cuando:
+- Alternativa	Cuándo usarla
+- PySpark / Dataflow	Pipelines más complejos, alto volumen, lógica avanzada.
+- dbt	Transformaciones SQL versionadas, testing y CI/CD.
+- Pandas / Python	Prototipado rápido o integración con ML.
+- Talend / Informatica	Procesos ETL corporativos con conectores legacy.
 
 
+
+
+5.4 Casos de uso comunes
+- Limpieza de datasets antes de cargarlos a BigQuery.
+- Preparación de datos para modelos de Machine Learning.
+- Estandarización de logs.
+- Transformación de datos provenientes de múltiples orígenes (Sheets, CSVs, SQL, API).
+- Migración de datos a esquemas analíticos estandarizados.
+
+5.5 Ingesta de datos en Dataprep
+Fuentes soportadas:
+- Cloud Storage (CSV, JSON, Avro, Parquet)
+- BigQuery
+- Cloud SQL
+- Google Sheets
+- URLs públicas
+
+El flujo típico es:
+
+- Seleccionar origen → importar dataset.
+- Dataprep infiere el schema y muestras del dataset.
+- Comenzar a crear la receta con pasos de limpieza y transformación.
+
+5.6 Tipos de datos soportados
+- Numéricos, string, boolean, date, timestamp.
+- Estructuras semi‑estructuradas (JSON anidado).
+- Archivos tabulares o columnar (CSV, Parquet).
+
+5.7 Pipeline típico de limpieza
+- Importar dataset.
+- Detectar anomalías (nulos, outliers, tipos incorrectos).
+- Eliminar columnas innecesarias.
+- Normalizar tipos de datos.
+- Eliminar duplicados.
+- Filtrar filas según reglas del negocio.
+- Crear columnas derivadas.
+- Validar calidad.
+- Exportar a BigQuery.
+
+5.8 Automatización
+- Dataprep se puede orquestar con:
+- Cloud Composer (Airflow)
+- API de Dataprep
+- Cloud Functions + Pub/Sub (trigger por archivos nuevos en GCS)
+
+5.9 Garantía de calidad de datos
+- Validaciones por reglas (NOT NULL, rangos, expresiones regulares).
+- Alertas por fallas de calidad.
+- Versionado de recetas.
+- Ejecución sobre subconjuntos antes de publicar.
 
